@@ -1,0 +1,78 @@
+[
+    {
+        "op": "ReduceSum",
+        "language": "cpp",
+        "input_desc": [
+            {
+                "name": "x",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND",
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "float",
+                    "fp16",
+                    "int32",
+                    "int8"
+                ]
+            },
+            {
+                "name": "axes",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND",
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "int32",
+                    "int32",
+                    "int32",
+                    "int32"
+                ]
+            }
+        ],
+        "output_desc": [
+            {
+                "name": "y",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND",
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "float",
+                    "fp16",
+                    "int32",
+                    "int8"
+                ]
+            }
+        ],
+        "attr": [
+            {
+              "name": "keep_dims",
+			  "param_type": "optional",
+              "type": "bool",
+              "default_value": false
+            },
+            {
+                "name": "ignore_nan",
+                "param_type": "optional",
+                "type": "bool",
+                "default_value": false
+            },
+            {
+                "name": "dtype",
+                "param_type": "optional",
+                "type": "string",
+                "default_value": "float"
+            }
+        ]
+    }
+]
