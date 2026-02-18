@@ -1,0 +1,7 @@
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/edit_cache.dir
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/install/strip.dir
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/execute_op.dir
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/rebuild_cache.dir
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/list_install_components.dir
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/install/local.dir
+/mnt/workspace/0218_test01/reduce_max_v2/AclNNInvocation/build/CMakeFiles/install.dir

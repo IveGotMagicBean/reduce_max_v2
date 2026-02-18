@@ -1,0 +1,49 @@
+/**
+ * @file reduce_sum_tiling.h
+ * Optimized tiling data definition for ReduceSum operator.
+ * Supports multi-core parallel, last-reduce and non-last-reduce paths.
+ */
+
+#ifndef REDUCE_SUM_TILING_H
+#define REDUCE_SUM_TILING_H
+
+#include "register/tilingdata_base.h"
+
+namespace optiling {
+
+BEGIN_TILING_DATA_DEF(ReduceSumTilingData)
+  // 基础shape信息
+  TILING_DATA_FIELD_DEF(uint32_t, size);                    // 输入总元素数
+  TILING_DATA_FIELD_DEF_ARR(int32_t, 20, x_ndarray);        // 输入各维度大小
+  TILING_DATA_FIELD_DEF(int32_t, x_dimensional);            // 输入维度数
+  TILING_DATA_FIELD_DEF(int32_t, axes_num);                 // reduce轴数量
+  TILING_DATA_FIELD_DEF(bool, keep_dims);
+  TILING_DATA_FIELD_DEF(bool, ignore_nan);
+  TILING_DATA_FIELD_DEF(uint8_t, dtype);
+
+  // 多核并行参数
+  TILING_DATA_FIELD_DEF(uint32_t, coreNum);                 // 实际使用核数
+  TILING_DATA_FIELD_DEF(uint32_t, bigCoreNum);              // 多处理一块的核数
+  TILING_DATA_FIELD_DEF(uint32_t, bigCoreDataNum);          // 大核处理的元素数
+  TILING_DATA_FIELD_DEF(uint32_t, smallCoreDataNum);        // 小核处理的元素数
+
+  // Tiling分块参数
+  TILING_DATA_FIELD_DEF(uint32_t, tileDataNum);             // 每次tile的元素数
+  TILING_DATA_FIELD_DEF(uint32_t, bigTileNum);              // 大核的tile次数
+  TILING_DATA_FIELD_DEF(uint32_t, smallTileNum);            // 小核的tile次数
+  TILING_DATA_FIELD_DEF(uint32_t, bigTailDataNum);          // 大核尾块元素数
+  TILING_DATA_FIELD_DEF(uint32_t, smallTailDataNum);        // 小核尾块元素数
+
+  // Reduce几何参数（用于Last/NonLast路径判断）
+  TILING_DATA_FIELD_DEF(uint32_t, outerSize);               // reduce轴之外的元素数
+  TILING_DATA_FIELD_DEF(uint32_t, innerSize);               // reduce轴的元素数（归约长度）
+  TILING_DATA_FIELD_DEF(uint32_t, tailSize);                // 最内层维度中reduce轴之后的元素数
+  TILING_DATA_FIELD_DEF(uint32_t, tilingMode);              // 0=LastReduce 1=NonLastReduce 2=FullReduce
+
+END_TILING_DATA_DEF;
+
+REGISTER_TILING_DATA_CLASS(ReduceSum, ReduceSumTilingData)
+
+} // namespace optiling
+
+#endif // REDUCE_SUM_TILING_H

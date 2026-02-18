@@ -1,0 +1,254 @@
+/**
+ * @file reduce_sum.cpp (op_host)
+ * Optimized tiling for ReduceSum:
+ *  - Multi-core parallel (up to 20 AICore on 910B)
+ *  - Three tiling modes: LastReduce / NonLastReduce / FullReduce
+ *  - Dynamic tile size based on UB capacity
+ */
+
+#include "reduce_sum_tiling.h"
+#include "register/op_def_registry.h"
+#include "tiling/platform/platform_ascendc.h"
+
+namespace optiling {
+
+// UB预留系数：留出6份空间给双buffer+中间buffer
+static constexpr uint32_t UB_RESERVE_FACTOR = 6;
+// 最小对齐块（32B / 2B per fp16 = 16元素，或 32B / 4B per fp32 = 8元素）
+static constexpr uint32_t BLOCK_BYTES = 32;
+
+static ge::graphStatus TilingFunc(gert::TilingContext *context)
+{
+    ReduceSumTilingData tiling;
+
+    // ---- 1. 获取平台信息 ----
+    auto ascendcPlatform = platform_ascendc::PlatformAscendC(context->GetPlatformInfo());
+    uint64_t ubSize = 0;
+    ascendcPlatform.GetCoreMemSize(platform_ascendc::CoreMemType::UB, ubSize);
+    int64_t maxCoreNum = ascendcPlatform.GetCoreNum();
+    if (maxCoreNum <= 0) maxCoreNum = 20; // 910B4默认20核
+
+    // ---- 2. 获取输入shape信息 ----
+    auto shape_x = context->GetInputShape(0)->GetOriginShape();
+    int32_t axes_num = (int32_t)context->GetInputShape(1)->GetStorageShape().GetShapeSize();
+    int32_t x_dimensional = (int32_t)shape_x.GetDimNum();
+
+    int32_t x_ndarray[20] = {0};
+    uint32_t size = 1;
+    for (int i = 0; i < x_dimensional; i++) {
+        x_ndarray[i] = (int32_t)shape_x.GetDim(i);
+        size *= (uint32_t)x_ndarray[i];
+    }
+
+    // ---- 3. 获取reduce轴 ----
+    // axes从GlobalMemory读取，这里通过tiling context间接获取
+    // 实际axes值在kernel里从axesGm读取，tiling里只需要计算几何参数
+    // 我们通过output shape反推reduce轴
+    auto shape_y = context->GetOutputShape(0)->GetOriginShape();
+    bool keep_dims = *context->GetAttrs()->GetBool(0);
+    bool ignore_nan = *context->GetAttrs()->GetBool(1);
+    const char *dtype_str = context->GetAttrs()->GetStr(2);
+
+    // 找出哪些维度被reduce（通过比较input和output shape）
+    bool is_reduce_dim[20] = {false};
+    int y_dim_idx = 0;
+    for (int i = 0; i < x_dimensional; i++) {
+        int64_t y_dim = keep_dims ?
+            context->GetOutputShape(0)->GetOriginShape().GetDim(i) :
+            (y_dim_idx < (int)shape_y.GetDimNum() ?
+             shape_y.GetDim(y_dim_idx) : 1);
+        if (keep_dims) {
+            if (shape_y.GetDim(i) == 1 && x_ndarray[i] != 1) {
+                is_reduce_dim[i] = true;
+            }
+        } else {
+            // 非keep_dims时，输出维度数更少，通过对比推断
+            // 如果输出shape的当前位和输入不匹配，说明被reduce了
+            if (y_dim_idx < (int)shape_y.GetDimNum() &&
+                shape_y.GetDim(y_dim_idx) == x_ndarray[i]) {
+                y_dim_idx++;
+            } else {
+                is_reduce_dim[i] = true;
+            }
+        }
+    }
+
+    // ---- 4. 计算outerSize / innerSize / tailSize ----
+    // outerSize: reduce轴前面所有维度的乘积
+    // innerSize: reduce轴本身的乘积
+    // tailSize:  reduce轴后面所有维度的乘积
+    uint32_t outerSize = 1;
+    uint32_t innerSize = 1;
+    uint32_t tailSize = 1;
+    bool in_reduce = false;
+    bool after_reduce = false;
+
+    for (int i = 0; i < x_dimensional; i++) {
+        if (is_reduce_dim[i]) {
+            in_reduce = true;
+            after_reduce = false;
+            innerSize *= (uint32_t)x_ndarray[i];
+        } else if (in_reduce) {
+            after_reduce = true;
+            tailSize *= (uint32_t)x_ndarray[i];
+        } else {
+            outerSize *= (uint32_t)x_ndarray[i];
+        }
+    }
+    // 如果reduce轴分散（非连续），退化到通用模式
+    // tilingMode: 0=LastReduce(tail==1), 1=NonLastReduce(tail>1), 2=FullReduce(outer==1&&tail==1)
+    uint32_t tilingMode;
+    if (outerSize == 1 && tailSize == 1) {
+        tilingMode = 2; // FullReduce: 整个tensor求和
+    } else if (tailSize == 1) {
+        tilingMode = 0; // LastReduce: 对最后维度或连续尾部维度reduce
+    } else {
+        tilingMode = 1; // NonLastReduce: 中间维度reduce
+    }
+
+    // ---- 5. 获取数据类型字节数 ----
+    uint32_t typeBytes = 4; // 默认float32
+    auto inputDesc = context->GetInputDesc(0);
+    if (inputDesc != nullptr) {
+        auto dtype = inputDesc->GetDataType();
+        if (dtype == ge::DT_FLOAT16 || dtype == ge::DT_INT16 || dtype == ge::DT_UINT16 || dtype == ge::DT_BF16) {
+            typeBytes = 2;
+        } else if (dtype == ge::DT_INT8 || dtype == ge::DT_UINT8 || dtype == ge::DT_BOOL) {
+            typeBytes = 1;
+        } else {
+            typeBytes = 4; // float32, int32, uint32
+        }
+    }
+
+    // ---- 6. 计算每个tile能处理的元素数 ----
+    // UB分成UB_RESERVE_FACTOR份：2份inQueue(双buffer) + 1份outQueue + 1份计算buffer等
+    uint32_t tileBytes = (uint32_t)(ubSize / UB_RESERVE_FACTOR);
+    // 对齐到BLOCK_BYTES
+    tileBytes = (tileBytes / BLOCK_BYTES) * BLOCK_BYTES;
+    uint32_t tileDataNum = tileBytes / typeBytes;
+    if (tileDataNum == 0) tileDataNum = 256; // 保底
+
+    // ---- 7. 多核分配 ----
+    // 对于LastReduce: 按outerSize分配给各核，每核处理若干行
+    // 对于FullReduce / NonLastReduce: 按总元素数分配
+    uint32_t parallelUnit = (tilingMode == 0) ? outerSize : size;
+
+    int64_t coreNum = maxCoreNum;
+    if ((uint32_t)coreNum > parallelUnit) {
+        coreNum = (int64_t)parallelUnit;
+    }
+    if (coreNum <= 0) coreNum = 1;
+
+    // 大核多处理一个unit，小核少处理一个unit
+    uint32_t baseUnit = parallelUnit / (uint32_t)coreNum;
+    uint32_t bigCoreNum = parallelUnit % (uint32_t)coreNum; // 前bigCoreNum个核多处理1个unit
+
+    uint32_t bigCoreDataNum, smallCoreDataNum;
+    if (tilingMode == 0) {
+        // LastReduce: 每个unit = innerSize个元素（一行）
+        bigCoreDataNum   = (baseUnit + 1) * innerSize;
+        smallCoreDataNum = baseUnit * innerSize;
+    } else {
+        bigCoreDataNum   = baseUnit + 1;
+        smallCoreDataNum = baseUnit;
+    }
+
+    // 计算tile次数和尾块大小
+    auto calcTileInfo = [&](uint32_t coreDataNum, uint32_t &tileNum, uint32_t &tailDataNum) {
+        if (coreDataNum == 0) { tileNum = 0; tailDataNum = 0; return; }
+        tileNum = (coreDataNum + tileDataNum - 1) / tileDataNum;
+        tailDataNum = coreDataNum - (tileNum - 1) * tileDataNum;
+        if (tailDataNum == 0) tailDataNum = tileDataNum;
+    };
+
+    uint32_t bigTileNum, bigTailDataNum, smallTileNum, smallTailDataNum;
+    calcTileInfo(bigCoreDataNum,   bigTileNum,   bigTailDataNum);
+    calcTileInfo(smallCoreDataNum, smallTileNum, smallTailDataNum);
+
+    // ---- 8. 设置tiling key ----
+    // 1=LastReduce(float), 2=NonLastReduce/FullReduce(float)
+    // 对于非float类型，+10偏移（kernel里处理）
+    uint32_t tilingKey = tilingMode + 1; // 1,2,3
+    context->SetTilingKey(tilingKey);
+
+    // ---- 9. 填充tiling数据 ----
+    tiling.set_size(size);
+    tiling.set_x_ndarray(x_ndarray);
+    tiling.set_x_dimensional(x_dimensional);
+    tiling.set_axes_num(axes_num);
+    tiling.set_keep_dims(keep_dims);
+    tiling.set_ignore_nan(ignore_nan);
+    tiling.set_dtype((uint8_t)0);
+
+    tiling.set_coreNum((uint32_t)coreNum);
+    tiling.set_bigCoreNum(bigCoreNum);
+    tiling.set_bigCoreDataNum(bigCoreDataNum);
+    tiling.set_smallCoreDataNum(smallCoreDataNum);
+    tiling.set_tileDataNum(tileDataNum);
+    tiling.set_bigTileNum(bigTileNum);
+    tiling.set_smallTileNum(smallTileNum);
+    tiling.set_bigTailDataNum(bigTailDataNum);
+    tiling.set_smallTailDataNum(smallTailDataNum);
+    tiling.set_outerSize(outerSize);
+    tiling.set_innerSize(innerSize);
+    tiling.set_tailSize(tailSize);
+    tiling.set_tilingMode(tilingMode);
+
+    context->SetBlockDim((uint32_t)coreNum);
+
+    tiling.SaveToBuffer(
+        context->GetRawTilingData()->GetData(),
+        context->GetRawTilingData()->GetCapacity());
+    context->GetRawTilingData()->SetDataSize(tiling.GetDataSize());
+
+    // workspace: 系统需要的workspace
+    size_t *currentWorkspace = context->GetWorkspaceSizes(1);
+    auto sysWsSize = ascendcPlatform.GetLibApiWorkSpaceSize();
+    currentWorkspace[0] = sysWsSize;
+
+    return ge::GRAPH_SUCCESS;
+}
+
+} // namespace optiling
+
+namespace ge {
+static ge::graphStatus InferShape(gert::InferShapeContext *context)
+{
+    const gert::Shape *x1_shape = context->GetInputShape(0);
+    gert::Shape *y_shape = context->GetOutputShape(0);
+    *y_shape = *x1_shape;
+    return GRAPH_SUCCESS;
+}
+} // namespace ge
+
+namespace ops {
+class ReduceSum : public OpDef {
+public:
+    explicit ReduceSum(const char *name) : OpDef(name)
+    {
+        this->Input("x")
+            .ParamType(REQUIRED)
+            .DataType({ge::DT_FLOAT, ge::DT_FLOAT16, ge::DT_INT32, ge::DT_INT8})
+            .Format({ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND})
+            .UnknownShapeFormat({ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND});
+        this->Input("axes")
+            .ParamType(REQUIRED)
+            .DataType({ge::DT_INT32, ge::DT_INT32, ge::DT_INT32, ge::DT_INT32})
+            .Format({ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND})
+            .UnknownShapeFormat({ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND});
+        this->Output("y")
+            .ParamType(REQUIRED)
+            .DataType({ge::DT_FLOAT, ge::DT_FLOAT16, ge::DT_INT32, ge::DT_INT8})
+            .Format({ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND})
+            .UnknownShapeFormat({ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND, ge::FORMAT_ND});
+        this->Attr("keep_dims").AttrType(OPTIONAL).Bool(false);
+        this->Attr("ignore_nan").AttrType(OPTIONAL).Bool(false);
+        this->Attr("dtype").AttrType(OPTIONAL).String("float");
+
+        this->SetInferShape(ge::InferShape);
+        this->AICore().SetTiling(optiling::TilingFunc);
+        this->AICore().AddConfig("ascend910b");
+    }
+};
+OP_ADD(ReduceSum);
+} // namespace ops

@@ -1,12 +1,7 @@
 /**
-* @file reduce_sum_tiling.h
-*
-* Copyright (C) 2023-2024. Huawei Technologies Co., Ltd. All rights reserved.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-*/
+ * @file reduce_sum_tiling.h
+ * 精简版tiling - 控制在96字节以内
+ */
 
 #ifndef REDUCE_SUM_TILING_H
 #define REDUCE_SUM_TILING_H
@@ -14,18 +9,21 @@
 #include "register/tilingdata_base.h"
 
 namespace optiling {
+
 BEGIN_TILING_DATA_DEF(ReduceSumTilingData)
-  TILING_DATA_FIELD_DEF(uint32_t, size);
-  TILING_DATA_FIELD_DEF_ARR(int32_t, 20, x_ndarray);
-  TILING_DATA_FIELD_DEF(int32_t, x_dimensional);
-  TILING_DATA_FIELD_DEF(int32_t, axes_num);
-  TILING_DATA_FIELD_DEF(bool, keep_dims);
-  TILING_DATA_FIELD_DEF(bool, ignore_nan);
-  TILING_DATA_FIELD_DEF(uint8_t, dtype);
-  
+  // 基础信息 (必须保留，兼容baseline)
+  TILING_DATA_FIELD_DEF(uint32_t, size);                    // 4B
+  TILING_DATA_FIELD_DEF_ARR(int32_t, 20, x_ndarray);        // 80B
+  TILING_DATA_FIELD_DEF(int32_t, x_dimensional);            // 4B  
+  TILING_DATA_FIELD_DEF(int32_t, axes_num);                 // 4B
+  TILING_DATA_FIELD_DEF(bool, keep_dims);                   // 1B
+  TILING_DATA_FIELD_DEF(bool, ignore_nan);                  // 1B
+  TILING_DATA_FIELD_DEF(uint8_t, dtype);                    // 1B
+  // 到这里已经95字节，不能再加了！
 END_TILING_DATA_DEF;
 
 REGISTER_TILING_DATA_CLASS(ReduceSum, ReduceSumTilingData)
+
 }
 
-#endif // REDUCE_SUM_TILING_H
+#endif
