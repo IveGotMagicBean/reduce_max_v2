@@ -1,0 +1,693 @@
+using ASCEND_HOME_PATH: /home/developer/Ascend/cann-8.5.0-beta.1
+Preset CMake variables:
+
+  ASCEND_CANN_PACKAGE_PATH:PATH="/home/developer/Ascend/cann-8.5.0-beta.1"
+  ASCEND_COMPUTE_UNIT:STRING="ascend910b"
+  ASCEND_PYTHON_EXECUTABLE:STRING="python3"
+  CMAKE_BUILD_TYPE:STRING="Release"
+  CMAKE_INSTALL_PREFIX:PATH="/mnt/workspace/TEST/0220_test01/build_out"
+  ENABLE_BINARY_PACKAGE:BOOL="True"
+  ENABLE_CROSS_COMPILE:BOOL="False"
+  ENABLE_SOURCE_PACKAGE:BOOL="False"
+  ENABLE_TEST:BOOL="True"
+  vendor_name:STRING="customize"
+
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Opbuild generating sources
+-- Opbuild generating sources - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/workspace/TEST/0220_test01/build_out
+[ 66%] Generating tbe/op_info_cfg/ai_core/ascend910b/aic-ascend910b-ops-info.json
+[ 66%] Building CXX object op_host/CMakeFiles/cust_optiling.dir/reduce_max_custom.cpp.o
+
+
+==============check valid for ops info start==============
+==============check valid for ops info end================
+
+
+Compile op info cfg successfully.
+[ 66%] Built target ops_info_gen_ascend910b
+[100%] Linking CXX shared library libcust_opmaster_rt2.0.so
+[100%] Built target cust_optiling
+[ascend910b] Generating ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 ...
+[DEBUG] DRV(11329,python3):2026-02-20-20:18:28.375.801 [hdc_client.c:130][ascend][curpid:11329,11329][drv][hdc][drvHdcClientCreate]Create client success.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.930.133 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.930.165 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.930.293 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310B3] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.932.283 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.932.299 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.932.305 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.932.393 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_5591] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.933.968 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.933.983 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.933.989 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.933.993 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.058 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[MC61AM21AB] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.564 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label AICoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.579 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.587 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.592 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.595 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.934.615 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend035B] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.936.489 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.936.505 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.936.511 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.936.601 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_958a] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.939.302 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.939.318 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.939.441 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[AS31XM1X] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.940.236 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.940.249 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.940.255 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.940.259 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.940.295 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[SD3403] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.941.962 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.941.976 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.942.061 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[BS9SX1AA] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.943.619 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.943.634 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.943.640 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.943.644 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.943.707 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[BS9SX2AB] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.044 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.060 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.128 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310P5] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.772 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.785 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.791 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.795 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.945.829 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910ProA] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.948.494 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.948.509 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.948.633 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310B4] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.950.617 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.950.632 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.950.638 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.950.726 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_950z] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.952.705 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.952.720 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.952.726 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.952.822 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_957b] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.401 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.416 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.423 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.426 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.492 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[BS9SX2AA] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.709 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label AICoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.723 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.730 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.736 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.739 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.954.746 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[KirinX90] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.956.565 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9588.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.956.577 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9588] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.958.520 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_957c.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.958.531 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_957c] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.960.508 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.960.524 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.960.530 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.960.621 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_958b] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.962.411 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.962.426 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.962.510 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[BS9SX1AB] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.963.731 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.963.742 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.963.747 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.963.750 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.963.804 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9391] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.965.363 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.965.378 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.965.384 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.965.387 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.965.452 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[MC61AM21AA] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.967.385 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9584.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.967.396 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9584] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.968.631 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.968.643 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.968.647 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.968.652 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.968.706 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B1] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.970.610 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9576.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.970.621 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9576] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.971.978 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.971.993 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.972.060 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310P3] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.973.927 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.973.943 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.974.033 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend031] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.975.259 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.975.271 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.975.275 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.975.279 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.975.334 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9382] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.645 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.660 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.727 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend610] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.930 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label AICoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.943 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.951 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.956 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.959 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.976.966 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Kirin9030] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.978.600 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.978.613 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.978.698 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[BS9SX1AC] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.980.653 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.980.669 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.980.675 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.980.764 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9589] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.132 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.148 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.216 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310P7] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.859 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.871 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.877 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.881 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.982.916 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Hi3796CV300ES] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.984.811 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.984.826 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.984.831 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.984.920 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9581] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.986.853 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9591.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.986.865 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9591] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.988.099 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.988.111 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.988.117 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.988.121 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.988.177 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9362] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.989.339 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.989.350 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.989.356 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.989.360 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.989.416 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9372] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.990.582 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.990.593 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.990.597 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.990.601 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.990.656 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B2C] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.991.309 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.991.322 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.991.328 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.991.332 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.991.363 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910PremiumA] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.991.995 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.992.006 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.992.011 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.992.015 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.992.050 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Hi3796CV300CS] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.993.938 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9582.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.993.950 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9582] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:28.995.879 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9592.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.995.891 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9592] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.996.445 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label AICoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.996.462 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.996.470 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.996.476 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.996.479 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.996.499 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend035] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.999.133 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.999.148 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:28.999.270 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310B2] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.001.284 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9574.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.001.296 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9574] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.002.884 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.002.899 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.002.905 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.002.909 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.002.975 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend610Lite] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.004.186 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.004.197 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.004.202 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.004.205 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.004.258 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B3] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.005.419 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.005.431 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.005.435 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.005.438 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.005.493 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B4-1] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.006.795 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.006.810 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.006.879 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310P1] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.007.531 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.007.544 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.007.550 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.007.553 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.007.585 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910A] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.008.205 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.008.218 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.008.224 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.008.227 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.008.259 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.009.384 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.009.395 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.009.401 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.009.404 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.009.457 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B2] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.010.615 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.010.626 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.010.631 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.010.634 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.010.692 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9392] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.012.610 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9577.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.012.621 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9577] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.013.160 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label AICoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.013.175 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.013.182 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.013.188 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.013.191 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.013.211 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend035A] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.014.318 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.014.328 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.014.334 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.014.338 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.014.394 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910B4] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.016.296 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.016.311 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.016.317 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.016.407 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9599] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.018.352 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9572.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.018.364 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9572] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.020.318 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9575.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.020.330 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9575] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.021.545 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.021.558 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.021.564 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.021.568 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.021.623 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9381] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.023.515 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9578.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.023.526 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9578] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.024.641 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by MC62CM12AA.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.024.653 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[MC62CM12AA] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.026.543 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9587.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.026.554 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9587] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.028.504 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.028.519 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_default_value in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.028.525 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.028.613 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_957d] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.029.317 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.029.332 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.029.338 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key ddr_rate in old platform infos, label VectorCoreMemoryRates.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.029.342 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key vec_freq in old platform infos, label VectorCoreSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.029.375 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910ProB] has been initialized.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.032.046 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key CounterWorkspaceSize in old platform infos, label DSARandom.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.032.062 [platform_infos_lite_impl.cpp:311]11329 InitializeSingleNormal:Cannot find key jit_compile_mode in old platform infos, label SoftwareSpec.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.032.193 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend310B1] has been initialized.
+[WARNING] FE(11329,python3):2026-02-20-20:18:29.034.191 [platform_info.cpp:854]11329 AssemblePlatformInfoVector:Cannot find Soc info enum by Ascend910_9579.
+[DEBUG] FE(11329,python3):2026-02-20-20:18:29.034.202 [platform_info.cpp:856]11329 AssemblePlatformInfoVector:The platform info's os soc version[Ascend910_9579] has been initialized.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.500.898 [fusion_pass_mgr.py:59][decorator] Fusion pass[conv2d_data_rm_build_pass] of stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.290 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_of_conv3d] of op type[Conv3D] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.353 [fusion_pass_mgr.py:59][decorator] Fusion pass[trans_shape_depthwise_conv2d] of stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.714 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_for_elemwise] of op type[None] op pattern[ElemWise] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.782 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_for_broadcast] of op type[None] op pattern[Broadcast] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.835 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_of_biasadd] of op type[BiasAdd] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.885 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_of_requant_s16] of op type[AscendRequantS16] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.501.939 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_of_bninference] of op type[BNInferenceD] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.263 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_fully_connection] of op type[FullyConnection] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.322 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_fully_connection_compress] of op type[FullyConnectionCompress] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.681 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_matmul_bias_shape] of op type[MatMulV2] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.733 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_matmul_bias_shape] of op type[MatMul] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.778 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_matmulcompress_bias_shape] of op type[MatMulV2Compress] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.820 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_batch_matmul_shape] of op type[BatchMatMulV2] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.859 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_batch_matmul_shape] of op type[BatchMatMul] op pattern[None] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[INFO] TBE(11329,python3):2026-02-20-20:18:29.502.903 [fusion_pass_mgr.py:114][decorator] Fusion pass[trans_shape_transdata_fixpipe] of op type[None] op pattern[BatchMatmul] stage[InvokeStage.STAGE_BUILD] priority[1] has been registered.
+[WARNING] TBE(11329,python3):2026-02-20-20:18:29.611.469 [OpImplPolicy]te.platform.cce_policy.OpImplPolicy is deprecated, use te_fusion.fusion_util.OpImplPolicy instead.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:30.370.972 [rl_op_filter.py:287][_is_tune_all_op] RL filter info: is_tune_all_op: False
+[INFO] TBE(11329,python3):2026-02-20-20:18:30.546.105 [dynamic_op_filter.py:373][_need_to_tune_all_op] Auto search dynamic filter info: tune_all_op is False.
+[WARNING] TBE(11329,python3):2026-02-20-20:18:30.618.290 [<module>]'from te import tik' is deprecated, please replace it with 'from tbe import tik'.
+[WARNING] TBE(11329,python3):2026-02-20-20:18:31.731.037 [get_soc_spec]'from te.platform import get_soc_spec' is expired, please replace it with 'from tbe.common.platform import get_soc_spec'.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.295 [opc.py:362][__parse] --main_func = reduce_max_custom
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.335 [opc.py:362][__parse] --input_param = /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/bin_param/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86_param.json
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.359 [opc.py:362][__parse] --soc_version = Ascend910B1
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.381 [opc.py:362][__parse] --output = /mnt/workspace/TEST/0220_test01/build_out/op_kernel/binary/ascend910b/reduce_max_custom
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.402 [opc.py:362][__parse] --impl_mode = high_performance,optional
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.427 [opc.py:362][__parse] --simplified_key_mode = 0
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.453 [opc.py:362][__parse] --op_mode = dynamic
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.481 [opc.py:674][op_compile_classify] set compile mode: single_op_compile_config_file_mode.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.603 [opc.py:307][check_dir_valid] absolute output dir path is /mnt/workspace/TEST/0220_test01/build_out/op_kernel/binary/ascend910b/reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.701 [opc.py:480][__check_and_update_dir] set abs dir path /mnt/workspace/TEST/0220_test01/build_out/op_kernel/binary/ascend910b/reduce_max_custom for output.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.736 [opc.py:307][check_dir_valid] absolute output dir path is /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.770 [opc.py:480][__check_and_update_dir] set abs dir path /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0 for debug_dir.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.795 [opc.py:461][__check_and_update_file_path] path = /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/ReduceMaxCustom.py
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.884 [opc.py:295][check_file_valid] absolute json file path is /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/ReduceMaxCustom.py.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.788.980 [opc.py:461][__check_and_update_file_path] path = /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/bin_param/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86_param.json
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.789.068 [opc.py:295][check_file_valid] absolute json file path is /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/bin_param/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86_param.json.
+[WARNING] TBE(11329,python3):2026-02-20-20:18:31.789.197 [opc.py:493][check_opt_param_mode] simplified_key_mode is [0], set optional param mode gen_placeholder.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.789.227 [opc.py:546][check_op_relocatable_cfg] Save op_relocatable_bin False.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.789.671 [op_info_store.py:566][load_op_info_store] json_dir is /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.789.955 [op_info_store.py:571][load_op_info_store] Begin to load json file path /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info-cv.json.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.790.957 [op_info_store.py:571][load_op_info_store] Begin to load json file path /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info-nn.json.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.796.655 [op_info_store.py:571][load_op_info_store] Begin to load json file path /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info-oam.json.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.797.017 [op_info_store.py:571][load_op_info_store] Begin to load json file path /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info-math.json.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.797.933 [op_info_store.py:571][load_op_info_store] Begin to load json file path /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info-transformer.json.
+[INFO] TBE(11329,python3):2026-02-20-20:18:31.804.191 [op_info_store.py:571][load_op_info_store] Begin to load json file path /home/developer/Ascend/cann-8.5.0-beta.1/opp/built-in/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info-legacy.json.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.824.660 [op_info_store.py:463][generate_custom_opp_list] index: 0 custom_opp_path: /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/customize
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.824.876 [op_info_store.py:480][generate_vendor_opp_list] load_priority content is: load_priority=customize
+.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.824.910 [op_info_store.py:497][generate_vendor_opp_list] index: 0 custom_opp_path: /home/developer/Ascend/cann-8.5.0-beta.1/opp/vendors/customize.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.343 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found op in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.370 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found imp_path in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.396 [op_info_store.py:205][parse_basic_parameter] op_type:ReduceMaxCustom support dynamic_compile_static.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.420 [op_info_store.py:229][parse_basic_parameter_arg] op_type:ReduceMaxCustom is support dynamic rank.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.436 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found inputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.454 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found outputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.471 [op_info_store.py:76][get_str_from_op_content] Op ReduceMaxCustom not found coreType.flag in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.487 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found enableVectorCore in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.506 [op_info_store.py:276][init_op_info] Op ReduceMaxCustom get op_file value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.522 [op_info_store.py:285][init_op_info] Op ReduceMaxCustom get op_interface value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.537 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found opImplSwitch in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.600 [op_info_store.py:99][get_attr_list] Op ReduceMaxCustom attr_str in OpContent is reduceDim,isKeepDim
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.631 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: reduceDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.653 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: isKeepDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.669 [op_info_store.py:418][construct_op_info_from_dict] opKernelInfo ReduceMaxCustom initialize success.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.685 [op_info_store.py:384][construct_op_kernel_info] op_type:ReduceMaxCustom is find in custom path.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.730 [op_manager.py:417][get_core_type_from_op_content] op_content ReduceMaxCustom is not exist.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.746 [op_manager.py:417][get_core_type_from_op_content] op_content ReduceMaxCustom is not exist.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.759 [op_manager.py:417][get_core_type_from_op_content] op_content ReduceMaxCustom is not exist.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.772 [op_manager.py:417][get_core_type_from_op_content] op_content ReduceMaxCustom is not exist.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.786 [op_manager.py:417][get_core_type_from_op_content] op_content ReduceMaxCustom is not exist.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.825.799 [op_manager.py:417][get_core_type_from_op_content] op_content ReduceMaxCustom is not exist.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.826.041 [op_compilation.py:786][get_core_type_by_op_type] return op_type:[ReduceMaxCustom] core type: VectorCore, vector_combine: split
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:31.826.063 [op_compilation.py:812][check_and_update_core_type] set op_type: [ReduceMaxCustom] core type [VectorCore]
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.013.965 [op_compilation.py:470][__op_compile_by_json_info] __is_ascendc is True
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.145 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found op in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.170 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found imp_path in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.195 [op_info_store.py:205][parse_basic_parameter] op_type:ReduceMaxCustom support dynamic_compile_static.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.218 [op_info_store.py:229][parse_basic_parameter_arg] op_type:ReduceMaxCustom is support dynamic rank.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.234 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found inputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.250 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found outputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.266 [op_info_store.py:76][get_str_from_op_content] Op ReduceMaxCustom not found coreType.flag in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.281 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found enableVectorCore in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.301 [op_info_store.py:276][init_op_info] Op ReduceMaxCustom get op_file value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.318 [op_info_store.py:285][init_op_info] Op ReduceMaxCustom get op_interface value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.333 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found opImplSwitch in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.396 [op_info_store.py:99][get_attr_list] Op ReduceMaxCustom attr_str in OpContent is reduceDim,isKeepDim
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.423 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: reduceDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.446 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: isKeepDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.462 [op_info_store.py:418][construct_op_info_from_dict] opKernelInfo ReduceMaxCustom initialize success.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.481 [op_info_store.py:384][construct_op_kernel_info] op_type:ReduceMaxCustom is find in custom path.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.014.504 [op_compilation.py:412][get_op_func_attr] op_type is ReduceMaxCustom, main_func is reduce_max_custom, op_path is /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/ReduceMaxCustom.py
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.036.674 [op_compilation.py:484][__op_compile_by_json_info] End set_flag_before_compile
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.036.726 [op_info_parser.py:459][get_op_info] Start to resolve op json: 
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.036.930 [opc_common.py:519][opc_log_full] [op_info_parser.py:460][get_op_info] op = {'bin_filename': 'ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86', 'inputs': [{'name': 'x', 'index': 0, 'dtype': 'float16', 'format': 'ND', 'paramType': 'required', 'shape': [-2], 'format_match_mode': 'FormatAgnostic'}], 'outputs': [{'name': 'y', 'index': 0, 'dtype': 'float16', 'format': 'ND', 'paramType': 'required', 'shape': [-2], 'format_match_mode': 'FormatAgnostic'}, {'name': 'idx', 'index': 1, 'dtype': 'int32', 'format': 'ND', 'paramType': 'required', 'shape': [-2], 'format_match_mode': 'FormatAgnostic'}], 'attrs': [{'name': 'reduceDim', 'dtype': 'int', 'value': 0}, {'name': 'isKeepDim', 'dtype': 'int', 'value': 0}]}
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.036.957 [op_info_parser.py:223][__resolve_json_inputoutput] Start to resolve op json inputs.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.036.999 [op_info_parser.py:124][set_tensor_field_default] Ori_format is none, set as format.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.015 [op_info_parser.py:132][set_tensor_field_default] Ori_shape is none, set as shape.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.032 [op_info_parser.py:77][tensor_range_adjust] Range is None.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.045 [op_info_parser.py:77][tensor_range_adjust] Range is None.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.066 [op_info_parser.py:104][update_range_common] update_range to: [[1, None]].
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.101 [op_info_parser.py:177][create_tensor_dict] tensor_dict is {'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.119 [op_info_parser.py:223][__resolve_json_inputoutput] Start to resolve op json outputs.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.141 [op_info_parser.py:124][set_tensor_field_default] Ori_format is none, set as format.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.155 [op_info_parser.py:132][set_tensor_field_default] Ori_shape is none, set as shape.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.168 [op_info_parser.py:77][tensor_range_adjust] Range is None.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.180 [op_info_parser.py:77][tensor_range_adjust] Range is None.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.198 [op_info_parser.py:104][update_range_common] update_range to: [[1, None]].
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.227 [op_info_parser.py:177][create_tensor_dict] tensor_dict is {'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.248 [op_info_parser.py:124][set_tensor_field_default] Ori_format is none, set as format.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.262 [op_info_parser.py:132][set_tensor_field_default] Ori_shape is none, set as shape.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.275 [op_info_parser.py:77][tensor_range_adjust] Range is None.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.287 [op_info_parser.py:77][tensor_range_adjust] Range is None.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.304 [op_info_parser.py:104][update_range_common] update_range to: [[1, None]].
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.332 [op_info_parser.py:177][create_tensor_dict] tensor_dict is {'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'int32', 'range': [[1, None]]}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.350 [op_info_parser.py:330][__resolve_json_attr] Start to resolve json attr.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.378 [op_info_parser.py:364][__resolve_json_attr] Dict attr attr_dict: {'name': 'reduceDim', 'dtype': 'int', 'value': 0}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.399 [op_info_parser.py:364][__resolve_json_attr] Dict attr attr_dict: {'name': 'isKeepDim', 'dtype': 'int', 'value': 0}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.431 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found op in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.447 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found imp_path in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.469 [op_info_store.py:205][parse_basic_parameter] op_type:ReduceMaxCustom support dynamic_compile_static.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.490 [op_info_store.py:229][parse_basic_parameter_arg] op_type:ReduceMaxCustom is support dynamic rank.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.504 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found inputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.518 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found outputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.533 [op_info_store.py:76][get_str_from_op_content] Op ReduceMaxCustom not found coreType.flag in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.548 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found enableVectorCore in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.565 [op_info_store.py:276][init_op_info] Op ReduceMaxCustom get op_file value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.581 [op_info_store.py:285][init_op_info] Op ReduceMaxCustom get op_interface value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.595 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found opImplSwitch in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.650 [op_info_store.py:99][get_attr_list] Op ReduceMaxCustom attr_str in OpContent is reduceDim,isKeepDim
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.678 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: reduceDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.702 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: isKeepDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.718 [op_info_store.py:418][construct_op_info_from_dict] opKernelInfo ReduceMaxCustom initialize success.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.735 [op_info_store.py:384][construct_op_kernel_info] op_type:ReduceMaxCustom is find in custom path.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.759 [op_info_parser.py:311][__get_attr_based_on_op_info] Dict attr curr_attr: {'name': 'reduceDim', 'dtype': 'int', 'value': 0}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.778 [op_info_parser.py:311][__get_attr_based_on_op_info] Dict attr curr_attr: {'name': 'isKeepDim', 'dtype': 'int', 'value': 0}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.798 [op_info_parser.py:373][__resolve_json_by_key] Start to resolve json by key bin_filename.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.813 [op_info_parser.py:373][__resolve_json_by_key] Start to resolve json by key simplified_key.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.827 [op_info_parser.py:376][__resolve_json_by_key] Has no key simplified_key.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.849 [op_info_parser.py:473][get_op_info] Resolve json to dict, input: ({'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]},).
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.874 [op_info_parser.py:474][get_op_info] Resolve json to dict, output: ({'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]}, {'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'int32', 'range': [[1, None]]}).
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.897 [op_info_parser.py:475][get_op_info] Resolve json to dict, attr: [{'name': 'reduceDim', 'dtype': 'int', 'value': 0}, {'name': 'isKeepDim', 'dtype': 'int', 'value': 0}], bin_filename ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86, simplified_key .
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.037.927 [op_compilation.py:228][__set_int64_mode] int64_mode of Op[ReduceMaxCustom] is 0.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.035 [op_compilation.py:268][__set_impl_mode] impl_mode_cfg [high_performance,optional]. impl_mode_default: [impl_mode=''].
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.062 [opc_common.py:310][normalize_optional_impl_mode] impl_mode_str[high_performance].
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.082 [op_compilation.py:272][__set_impl_mode] ImplMode of Op[ReduceMaxCustom] is high_performance, opt_impl_mode_flag is 1.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.402 [opc_common.py:519][opc_log_full] [op_info_parser.py:484][generate_kernel_name] Start to generate kernel name, op_info_dict is {'op_type': 'ReduceMaxCustom', 'op_func_attr': <function reduce_max_custom at 0xffff6fad5ee0>, 'extra_params': {}, 'status_check': 'true', 'enable_vector_core': False, 'impl_mode': 'high_performance', 'jit_compile_mode': 0, 'is_ascendc_op': False, 'deterministic': 'true', 'inputs': ({'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]},), 'outputs': ({'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]}, {'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'int32', 'range': [[1, None]]}), 'attrs': [{'name': 'reduceDim', 'dtype': 'int', 'value': 0}, {'name
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.427 [opc_common.py:519][opc_log_full] ': 'isKeepDim', 'dtype': 'int', 'value': 0}], 'bin_filename': 'ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86', 'is_dynamic': True, 'int64_mode': False, 'optional_impl_mode_flag': True}.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.446 [op_info_parser.py:488][generate_kernel_name] Bin_filename is not none, use it as kernel name: ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.568 [op_compilation.py:139][__create_debug_dir] Debug dir[/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0/kernel_meta_ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86] has been created.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.613 [op_compilation.py:118][__create_lock_file] Lock file[/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0/kernel_meta_ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86/kernel_meta.lock] is not existed, try to create it
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.729 [op_compilation.py:121][__create_lock_file] Lock file[/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0/kernel_meta_ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86/kernel_meta.lock] has been created
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.038.758 [op_compilation.py:322][__single_op_compile] call vector_random_buff, debug_dir is /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0/kernel_meta_ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.049.974 [op_compilation.py:335][__single_op_compile] Call SingleOpCompile.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.050.003 [single_op_compile.py:222][op_compile] op_compile.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.050.033 [single_op_compile.py:236][op_compile] debug_config , enable_super_kernel False.
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.060.307 [single_op_compile.py:97][__call_op] __call_op
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.436 [single_op_compile.py:85][__get_kwargs] impl_mode: high_performance
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.568 [single_op_compile.py:118][__call_op] context_op_info op_type [ReduceMaxCustom], precision_mode: high_performance.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.603 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found op in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.622 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found imp_path in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.644 [op_info_store.py:205][parse_basic_parameter] op_type:ReduceMaxCustom support dynamic_compile_static.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.665 [op_info_store.py:229][parse_basic_parameter_arg] op_type:ReduceMaxCustom is support dynamic rank.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.681 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found inputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.695 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found outputMemContinues in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.711 [op_info_store.py:76][get_str_from_op_content] Op ReduceMaxCustom not found coreType.flag in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.725 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found enableVectorCore in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.744 [op_info_store.py:276][init_op_info] Op ReduceMaxCustom get op_file value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.760 [op_info_store.py:285][init_op_info] Op ReduceMaxCustom get op_interface value is reduce_max_custom.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.775 [op_info_store.py:70][get_str_from_op_content] Op ReduceMaxCustom not found opImplSwitch in OpContent!
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.828 [op_info_store.py:99][get_attr_list] Op ReduceMaxCustom attr_str in OpContent is reduceDim,isKeepDim
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.852 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: reduceDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.874 [op_info_store.py:172][parse_attrs_from_content] op_type: ReduceMaxCustom add attr_info: isKeepDim.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.890 [op_info_store.py:418][construct_op_info_from_dict] opKernelInfo ReduceMaxCustom initialize success.
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.907 [op_info_store.py:384][construct_op_kernel_info] op_type:ReduceMaxCustom is find in custom path.
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.060.932 [opc_common.py:599][check_attr_for_simpilified_key] attr's dtype: int, value: 0
+[WARNING] TBE(11329,python3):2026-02-20-20:18:32.060.954 [opc_common.py:546][check_and_generate_single_attr_for_simpilified_key] dtype[int] has non-null value, and simplified key won't be generated
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:32.060.971 [opc_common.py:613][check_attr_for_simpilified_key] attr_str: 
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.013 [opc_common.py:717][check_input_or_output_for_simplified_key] check input: has_invalid_option False, has_dynamic_param False, has_optional_input False
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.046 [opc_common.py:720][check_input_or_output_for_simplified_key] check output: has_invalid_option False, has_dynamic_param False, has_optional_output False
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.064 [simplified_key_utils.py:87][generate_simplified_key_mode] optional_input_mode: gen_placeholder
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.080 [simplified_key_utils.py:99][generate_simplified_key_mode] simplified_key_mode: 0, dynamic_param_mode: folded_with_desc, optional_param_mode: gen_placeholder
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.268 [opc_common.py:521][opc_log_full] [single_op_compile.py:134][__call_op] Call op func, inputs: ({'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]},), outputs: ({'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'float16', 'range': [[1, None]]}, {'shape': [-2], 'ori_shape': [-2], 'format': 'ND', 'ori_format': 'ND', 'dtype': 'int32', 'range': [[1, None]]}), attrs: [0, 0], kernel_name: ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.419 [opc_common.py:521][opc_log_full] [single_op_compile.py:136][__call_op] kwargs: {'impl_mode': 'high_performance'}, optional_input_mode: gen_placeholder, optional_output_mode: gen_placeholder, dyn_param_mode folded_with_desc.
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.061.551 [opc_common.py:521][opc_log_full] [single_op_compile.py:138][__call_op] SPK_OPT[], output_path: /mnt/workspace/TEST/0220_test01/build_out/op_kernel/binary/ascend910b/reduce_max_custom.
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.062.901 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b] start compile Ascend C Operator ReduceMaxCustom, kernel name is ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86
+Opc tool start working now, please wait for a moment.
+[2026-02-20 20:18:32] [INFO] [ascend910b] start compile Ascend C Operator ReduceMaxCustom, kernel name is ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86
+[WARNING] TBE(11329,python3):2026-02-20-20:18:32.063.143 [repository_manager_log.py:30][log] [log_utils.py:181][repository_manager] [ascend910b] Not found tiling so file, use default api soc verison
+[2026-02-20 20:18:32] [WARNING] [ascend910b] Not found tiling so file, use default api soc verison
+[INFO] TBE(11329,python3):2026-02-20-20:18:32.064.360 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b]  ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 precompile to get some simple kernel info...
+[2026-02-20 20:18:32] [INFO] [ascend910b] ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 precompile to get some simple kernel info...
+[INFO] TBE(11329,python3):2026-02-20-20:18:33.493.680 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b]  ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 precompile to get some simple kernel info success
+[2026-02-20 20:18:33] [INFO] [ascend910b] ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 precompile to get some simple kernel info success
+[INFO] TBE(11329,python3):2026-02-20-20:18:33.494.172 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b]  ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 get tiling info...
+[2026-02-20 20:18:33] [INFO] [ascend910b] ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 get tiling info...
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.808.193 [trace_attr.c:100](tid:11329) doesn't set env ASCEND_LOG_DEVICE_FLUSH_TIMEOUT, use default timeout=0ms.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.808.211 [trace_attr.c:190](tid:11329) attr init successfully, timeout=0ms.
+[WARNING] ATRACE(11329,python3):2026-02-20-20:18:33.808.218 [trace_system_api.c:111](tid:11329) Environment variable is null or the length exceeds 255.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.808.250 [trace_recorder.c:41](tid:11329) home_directory=/home/developer.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.808.258 [trace_recorder.c:182](tid:11329) use root path: /home/developer/ascend
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.808.265 [trace_event.c:147](tid:11329) init trace event successfully
+[DEBUG] ATRACE(11329,python3):2026-02-20-20:18:33.808.279 [trace_event.c:204](tid:11329) insert event trace_inner_event to event list
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.808.287 [atrace_client_core.c:185](tid:11329) init atrace client successfully.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.269 [stacktrace_dumper.c:243](tid:11329) path = /home/developer/Ascend/cann-8.5.0-beta.1/aarch64-linux/bin/asc_dumper
+[WARNING] ATRACE(11329,python3):2026-02-20-20:18:33.809.285 [trace_system_api.c:111](tid:11329) Environment variable is null or the length exceeds 256.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.417 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 2 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.426 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 15 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.432 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 3 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.437 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 4 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.442 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 5 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.446 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 6 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.451 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 7 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.455 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 8 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.460 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 11 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.465 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 24 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.470 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 25 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.474 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 31 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.478 [stacktrace_signal.c:171](tid:11329) register signal handler for signal 35 succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.481 [stacktrace_signal.c:174](tid:11329) trace signal init succeed.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.485 [trace_core.c:51](tid:11329) init trace successfully.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.517 [awatchdog_core.c:99](tid:11329) watchdog get platform host side
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.579 [awatchdog_monitor.c:127](tid:11329) create monitor thread successfully, tid :281472503640480 
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:33.809.585 [awatchdog_monitor.c:225](tid:11329) AwdMonitorInit
+[DEBUG] ATRACE(11329,python3):2026-02-20-20:18:33.809.600 [awatchdog_monitor.c:66](tid:11400) watchdog 0, period 200000, resPeriod 200000
+[INFO] RUNTIME(11329,python3):2026-02-20-20:18:33.821.399 [task_fail_callback_data_manager.cc:88] 11329 TaskFailCallBackManager: Constructor.
+[INFO] GE(11329,python3):2026-02-20-20:18:33.831.658 [operator_factory_impl.cc:252]11329 RegisterInferShapeV2Func:operator infer shape v2 funcs init
+[INFO] GE(11329,python3):2026-02-20-20:18:33.831.677 [operator_factory_impl.cc:266]11329 RegisterInferShapeRangeFunc:operator infer shape range funcs init
+[INFO] GE(11329,python3):2026-02-20-20:18:33.831.684 [operator_factory_impl.cc:259]11329 RegisterInferDataTypeFunc:operator infer data type funcs init
+[INFO] GE(11329,python3):2026-02-20-20:18:33.831.689 [operator_factory_impl.cc:404]11329 RegisterInferFormatV2Func:operator infer format v2 funcs init
+[INFO] GE(11329,python3):2026-02-20-20:18:33.831.694 [operator_factory_impl.cc:416]11329 RegisterIsInferFormatV2RegisteredFunc:operator is_infer_format_v2_registered funcs init
+[INFO] IDEDD(11329,python3):2026-02-20-20:18:33.886.500 [dump_manager.cpp:445][tid:11329] Registered callback for module 63
+[WARNING] IDEDD(11329,python3):2026-02-20-20:18:33.886.528 [dump_manager.cpp:547][tid:11329] Config data is null or empty. Not trigger HandleDumpEvent.
+[INFO] OP(11329,python3):2026-02-20-20:18:33.886.608 [op_dfx_util.h:46][NNOP][SystemConfig][11329] enable debug kernel flag 0.
+[INFO] PROFILING(11329,python3):2026-02-20-20:18:33.886.622 [prof_cann_plugin.cpp:289] (tid:11329) Register module[61] callback.
+[INFO] GE(11329,python3):2026-02-20-20:18:33.887.747 [error_manager.cc:1045]11329 RegisterFormatErrorMessage:RegisterFormatErrorMessage, try to register error message
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.887.759 [error_manager.cc:680]11329 ParseJsonFormatString:Begin to parse json string
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.887.800 [error_manager.cc:708]11329 ParseJsonFormatString:add error_code EZ9999 success
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.887.811 [error_manager.cc:708]11329 ParseJsonFormatString:add error_code EZ1001 success
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.887.821 [error_manager.cc:708]11329 ParseJsonFormatString:add error_code EZ9903 success
+[INFO] OP(11329,python3):2026-02-20-20:18:33.888.679 [indv_args_pool.cpp:143][NNOP][GetCacheSizeLimit][11329] Cachelimit is 10000
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.447 [tilingdata_base.cc:127]11329 InitData:TilingDef::InitData, op ReduceMaxCustomTilingData, data size 8.
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.463 [tilingdata_base.cc:154]11329 RegisterTilingData:op_type: ReduceMaxCustom, registered count: 1.
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.534 [op_config_registry.cc:58]11329 GetOpAllAICoreConfig:Aicore config size: 0
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.543 [op_config_registry.cc:62]11329 GetOpAllAICoreConfig:Can not find aicore config for op[ReduceMaxCustom].
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.549 [op_def.cc:20]11329 OpDef:Aicore op[ReduceMaxCustom] configs size: 0
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.600 [op_def_aicore.cc:186]11329 AddConfig:Call AddConfig for soc[ascend910b].
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.890.618 [op_impl_registry.cc:189]11329 OpImplRegisterV2:op type: ReduceMaxCustom
+[INFO] GE(11329,python3):2026-02-20-20:18:33.890.649 [op_check.cc:24]11329 RegisterOpCapability:RegisterOpCapability: check_type:check_supported, op_type:ReduceMaxCustom, funcPointer:(nil), registered count:1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.890.658 [op_check.cc:24]11329 RegisterOpCapability:RegisterOpCapability: check_type:op_select_format, op_type:ReduceMaxCustom, funcPointer:(nil), registered count:1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.890.665 [op_check.cc:24]11329 RegisterOpCapability:RegisterOpCapability: check_type:get_op_support_info, op_type:ReduceMaxCustom, funcPointer:(nil), registered count:1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.890.672 [op_check.cc:24]11329 RegisterOpCapability:RegisterOpCapability: check_type:get_op_specific_info, op_type:ReduceMaxCustom, funcPointer:(nil), registered count:1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.890.680 [op_check.cc:71]11329 RegisterParamGeneralize:RegisterParamGeneralize: op_type:ReduceMaxCustom, funcPointer:(nil), registered count:1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.890.803 [op_impl_registry.cc:111]11329 RegisterOpImplToRegistry:LocalRegistry[12734075092298295256] Op type[ReduceMaxCustom] register OP_IMPL : [Tiling][TilingParse]
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.891.244 [op_tiling_py.cc:1978]11329 TbeLoadSoAndSaveToRegistry:start TbeLoadSoAndSaveToRegistry, so path: /mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/../customize/op_impl/ai_core/tbe/op_tiling/liboptiling.so, pid is 11329
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.264 [op_impl_space_registry_v2_impl.cc:75]11329 AddSoToRegistry:Start to AddSoToRegistry so_path:/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/../customize/op_impl/ai_core/tbe/op_tiling/liboptiling.so, package name 
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.738 [op_impl_functions.cc:24]11329 GetRegisteredOpNum:LocalRegistry[12734075092298295256] all impl size : 1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.750 [op_impl_registry_holder_manager.cc:203]11329 GetOpImplFunctionsByHandle:GetRegisteredOpNum: 1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.817 [op_impl_functions.cc:51]11329 GetOpImplFunctionsV2:LocalRegistry[12734075092298295256] all impl size : 1
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.891.830 [op_impl_registry_holder_manager.cc:143]11329 GetImplFunc:impl_funcs[0], op type: ReduceMaxCustom
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.886 [op_impl_functions.cc:24]11329 GetRegisteredOpNum:LocalRegistry[12734075092298295256] all impl size : 1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.892 [op_impl_registry_holder_manager.cc:203]11329 GetOpImplFunctionsByHandle:GetRegisteredOpNum: 1
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.947 [op_impl_functions.cc:32]11329 GetOpImplFunctions:LocalRegistry[12734075092298295256] all impl size : 1
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.891.955 [op_impl_registry_holder_manager.cc:143]11329 GetImplFunc:impl_funcs[0], op type: ReduceMaxCustom
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.962 [op_impl_registry_holder_manager.cc:203]11329 GetOpImplFunctionsByHandle:GetRegisteredOpCtNum: 0
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.891.974 [op_impl_space_registry_v2_impl.cc:230]11329 MergeTypesToImpl:Merge types to impl, op type ReduceMaxCustom
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.985 [op_impl_space_registry_v2_impl.cc:113]11329 AddSoToRegistry:Save so symbol and handle in path[/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/../customize/op_impl/ai_core/tbe/op_tiling/liboptiling.so] successfully!
+[INFO] GE(11329,python3):2026-02-20-20:18:33.891.992 [op_impl_space_registry_v2_impl.cc:119]11329 AddSoToRegistry:Start to check missing implementation for custom op package []
+[DEBUG] GE(11329,python3):2026-02-20-20:18:33.892.311 [tilingdata_base.cc:127]11329 InitData:TilingDef::InitData, op ReduceMaxCustomTilingData, data size 8.
+[WARNING] GE(11329,python3):2026-02-20-20:18:33.892.493 [tilingdata_base.cc:162]11329 CreateTilingDataInstance:cannot find op_type:ReduceMaxCustom_0.
+[WARNING] GE(11329,python3):2026-02-20-20:18:33.892.502 [ascendc_py.cc:430]11329 AscendCPyInterfaceGetTilingDefInfo:Failed to CreateTilingDataInstance. optype = ReduceMaxCustom_0
+[INFO] TBE(11329,python3):2026-02-20-20:18:33.892.623 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b]  ReduceMaxCustom_0 has no Tiling Info
+[2026-02-20 20:18:33] [INFO] [ascend910b] ReduceMaxCustom_0 has no Tiling Info
+[INFO] TBE(11329,python3):2026-02-20-20:18:33.892.869 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b]  ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 get tiling info success
+[2026-02-20 20:18:33] [INFO] [ascend910b] ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 get tiling info success
+[INFO] TBE(11329,python3):2026-02-20-20:18:33.893.198 [repository_manager_log.py:30][log] [log_utils.py:179][repository_manager] [ascend910b]  ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 get kernel type by infer channel...
+[2026-02-20 20:18:33] [INFO] [ascend910b] ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 get kernel type by infer channel...
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.011.446 [repository_manager_log.py:30][log] [log_utils.py:183][repository_manager] [ascend910b]  ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 /mnt/workspace/TEST/0220_test01/op_kernel/reduce_max_custom.cpp:30:17: error: half precision operation is not allowed in aicore function
+        if (val > max_val) {
+                ^
+1 error generated.
+[2026-02-20 20:18:36] [ERROR] [ascend910b] ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86 /mnt/workspace/TEST/0220_test01/op_kernel/reduce_max_custom.cpp:30:17: error: half precision operation is not allowed in aicore function
+        if (val > max_val) {
+                ^
+1 error generated.
+
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.011.773 [op_compilation.py:344][__single_op_compile] Exception occured, An error occurred during compile phases of CompileStage.INFERCHANNEL, msg is /mnt/workspace/TEST/0220_test01/op_kernel/reduce_max_custom.cpp:30:17: error: half precision operation is not allowed in aicore function
+        if (val > max_val) {
+                ^
+1 error generated.
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.014.850 [opc_common.py:232][_log_error] Traceback (most recent call last):
+  File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/opc_tool/op_compilation.py", line 336, in __single_op_compile
+    json_file_path = single_op_obj.op_compile()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/opc_tool/single_op_compile.py", line 255, in op_compile
+    json_file_path = self.__call_op()
+                     ^^^^^^^^^^^^^^^^
+  File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/opc_tool/single_op_compile.py", line 151, in __call_op
+    op_func(*inputs, *outputs, *new_attrs, self.__op_info.get(OpcOptions.KERNEL_NAME), **kwargs)
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.014.883 [opc_common.py:232][_log_error]   File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/tbe/common/register/operation_func_mgr.py", line 214, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/tbe/common/utils/para_check.py", line 548, in _in_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/dynamic/ReduceMaxCustom.py", line 235, in reduce_max_custom
+    compile_op(src, origin_func_name, op_info, options, code_channel, '{}', {'valueDepend': {}})
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.014.905 [opc_common.py:232][_log_error]   File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/tbe/tikcpp/compile_op.py", line 1268, in compile_op
+    compile_op_common_part(cce_file, origin_func_name, op_info, compile_option_tuple, infered_info_from_ifile,
+  File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/tbe/tikcpp/compile_op.py", line 1034, in compile_op_common_part
+    code_channel, hardware_sync_in_asm = get_code_channel_v220_by_first_tiling_key(
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.014.924 [opc_common.py:232][_log_error]   File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/tbe/tikcpp/ascendc_compile_v220.py", line 644, in get_code_channel_v220_by_first_tiling_key
+    CommonUtility.dump_build_log(out.decode(), compile_cmd, CompileStage.INFERCHANNEL, proc.returncode)
+  File "/home/developer/Ascend/cann-8.5.0-beta.1/python/site-packages/tbe/tikcpp/ascendc_common_utility.py", line 630, in dump_build_log
+    raise Exception("An error occurred during compile phases of {}, msg is {}".\
+Exception: An error occurred during compile phases of CompileStage.INFERCHANNEL, msg is /mnt/workspace/TEST/0220_test01/op_kernel/reduce_max_custom.cpp:30:17: error: half precision operation is not allowed in aicore function
+        if (val > max_val) {
+                ^
+1 error generated.
+
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.014.947 [op_compilation.py:214][record_compile_error_info] Op[ReduceMaxCustom] of index[0] compile failed, kernelName: ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.015.131 [opc_common.py:525][opc_log_full] [op_compilation.py:216][record_compile_error_info] reason is:[An error occurred during compile phases of CompileStage.INFERCHANNEL, msg is /mnt/workspace/TEST/0220_test01/op_kernel/reduce_max_custom.cpp:30:17: error: half precision operation is not allowed in aicore function
+        if (val > max_val) {
+                ^
+1 error generated.
+].
+[DEBUG] TBE(11329,python3):2026-02-20-20:18:36.015.327 [op_compilation.py:732][clear_debug_dir] Lock file[/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0/kernel_meta_ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86/kernel_meta.lock] has been removed.
+[INFO] TBE(11329,python3):2026-02-20-20:18:36.017.181 [op_compilation.py:747][clear_debug_dir] debug_dir [/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/kernel_0/kernel_meta_ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86] removed.
+[ERROR] TBE(11329,python3):2026-02-20-20:18:36.017.211 [opc.py:763][main] Opc tool compile failed.
+[INFO] GE(11329,python3):2026-02-20-20:18:36.459.553 [operator_factory_impl.cc:31]11329 ReleaseOpsRegInfo:Release ops proto reg info success.
+[INFO] GE(11329,python3):2026-02-20-20:18:36.459.597 [op_impl_registry_holder_manager.cc:30]11329 CloseHandle:start close handle, handle[0x1aac0010].
+[INFO] RUNTIME(11329,python3):2026-02-20-20:18:36.469.845 [runtime_keeper.cc:165] 11329 DestroyRuntimeImpl: soHandle or rt is nullptr
+[INFO] RUNTIME(11329,python3):2026-02-20-20:18:36.470.692 [task_fail_callback_data_manager.cc:93] 11329 ~TaskFailCallBackManager: Destructor.
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:36.637.531 [stacktrace_signal.c:194](tid:11329) unregister all signal handlers, can not capture signal.
+[DEBUG] ATRACE(11329,python3):2026-02-20-20:18:36.711.159 [trace_event.c:247](tid:11329) delete event trace_inner_event from event list
+[INFO] ATRACE(11329,python3):2026-02-20-20:18:36.711.182 [awatchdog_monitor.c:233](tid:11329) AwdMonitorExit
+/mnt/workspace/TEST/0220_test01/build_out/op_kernel/binary/ascend910b/reduce_max_custom/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.json not generated!
+make[4]: *** [/mnt/workspace/TEST/0220_test01/build_out/op_kernel/ReduceMaxCustom_ascend910b/reduce_max_custom.make:3: reduce_max_custom0] Error 1
+Traceback (most recent call last):
+  File "/mnt/workspace/TEST/0220_test01/cmake/util/ascendc_compile_kernel.py", line 219, in <module>
+    kernel_builder.ascendc_build()
+  File "/mnt/workspace/TEST/0220_test01/cmake/util/ascendc_compile_kernel.py", line 162, in ascendc_build
+    raise RuntimeError('Kernel Compilation Error: OpType {} Kernel File {}!'.format(
+RuntimeError: Kernel Compilation Error: OpType ReduceMaxCustom Kernel File /mnt/workspace/TEST/0220_test01/op_kernel/reduce_max_custom.cpp!
+gmake[3]: *** [op_kernel/CMakeFiles/ReduceMaxCustom_ascend910b.dir/build.make:70: op_kernel/CMakeFiles/ReduceMaxCustom_ascend910b] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:425: op_kernel/CMakeFiles/ReduceMaxCustom_ascend910b.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:353: op_kernel/CMakeFiles/binary.dir/rule] Error 2
+gmake: *** [Makefile:280: binary] Error 2
+Consolidate compiler generated dependencies of target cust_optiling
+[  8%] Generating scripts/install.sh, scripts/upgrade.sh
+[ 16%] Building CXX object framework/tf_plugin/CMakeFiles/cust_tf_parsers.dir/tensorflow_reduce_max_custom_plugin.cc.o
+[ 25%] Building CXX object op_host/CMakeFiles/cust_op_proto.dir/reduce_max_custom.cpp.o
+[ 33%] Building CXX object op_host/CMakeFiles/cust_opapi.dir/__/autogen/aclnn_reduce_max_custom.cpp.o
+[ 41%] Building CXX object op_host/CMakeFiles/cust_op_proto.dir/__/autogen/op_proto.cc.o
+[ 50%] Built target ops_info_gen_ascend910b
+[ 58%] Generating tbe/op_info_cfg/ai_core/npu_supported_ops.json
+[ 58%] Built target gen_version_info
+[ 75%] Built target cust_optiling
+/mnt/workspace/TEST/0220_test01/build_out/autogen /mnt/workspace/TEST/0220_test01/build_out/op_kernel/tbe/op_info_cfg/ai_core
+[ 75%] Built target modify_vendor
+[ 75%] Built target optiling_compat
+[INFO] Succed generated /mnt/workspace/TEST/0220_test01/build_out/op_kernel/tbe/op_info_cfg/ai_core/npu_supported_ops.json
+[ 75%] Built target npu_supported_ops
+[ 83%] Linking CXX shared library libcust_opapi.so
+[ 83%] Built target cust_opapi
+[ 91%] Linking CXX shared library libcust_tf_parsers.so
+[ 91%] Built target cust_tf_parsers
+[100%] Linking CXX shared library libcust_opsproto_rt2.0.so
+[100%] Built target cust_op_proto
+Run CPack packaging tool...
+CPack: Create package using External
+CPack: Install projects
+CPack: - Run preinstall target for: opp
+CPack: - Install project: opp []
+CMake Error at /mnt/workspace/TEST/0220_test01/build_out/op_kernel/cmake_install.cmake:58 (file):
+  file INSTALL cannot find
+  "/mnt/workspace/TEST/0220_test01/build_out/op_kernel/binary/config": No
+  such file or directory.
+Call Stack (most recent call first):
+  /mnt/workspace/TEST/0220_test01/build_out/cmake_install.cmake:57 (include)
+
+
+CPack Error: Error when generating package: opp
+gmake: *** [Makefile:136: package] Error 1
