@@ -1,0 +1,6 @@
+/mnt/workspace/TEST/0225_test03/test_reducemax/build/CMakeFiles/rebuild_cache.dir
+/mnt/workspace/TEST/0225_test03/test_reducemax/build/CMakeFiles/edit_cache.dir
+/mnt/workspace/TEST/0225_test03/test_reducemax/build/CMakeFiles/test_perf3.dir
+/mnt/workspace/TEST/0225_test03/test_reducemax/build/CMakeFiles/test_perf2.dir
+/mnt/workspace/TEST/0225_test03/test_reducemax/build/CMakeFiles/test_reducemax.dir
+/mnt/workspace/TEST/0225_test03/test_reducemax/build/CMakeFiles/test_perf.dir
