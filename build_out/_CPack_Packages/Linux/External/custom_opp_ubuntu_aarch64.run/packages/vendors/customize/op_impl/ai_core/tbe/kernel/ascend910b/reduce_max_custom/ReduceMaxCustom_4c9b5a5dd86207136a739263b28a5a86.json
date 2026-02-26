@@ -1,0 +1,103 @@
+{
+ "binFileName": "ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86",
+ "binFileSuffix": ".o",
+ "blockDim": -1,
+ "coreType": "VectorCore",
+ "core_type": "AIV",
+ "intercoreSync": 0,
+ "kernelName": "ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86",
+ "magic": "RT_DEV_BINARY_MAGIC_ELF_AIVEC",
+ "memoryStamping": [],
+ "opParaSize": 32,
+ "parameters": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "sha256": "caa68685f3ee1c9998b955536a65560c66078cbe959025f243a4c7fbbd5816cd",
+ "workspace": {
+  "num": 1,
+  "size": [
+   -1
+  ],
+  "type": [
+   0
+  ]
+ },
+ "kernelList": [
+  {
+   "kernelName": "ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86_0"
+  }
+ ],
+ "optionalInputMode": "gen_placeholder",
+ "optionalOutputMode": "gen_placeholder",
+ "supportSuperKernel": 1,
+ "compileInfo": {},
+ "supportInfo": {
+  "implMode": "high_performance",
+  "int64Mode": false,
+  "simplifiedKeyMode": 0,
+  "simplifiedKey": [
+   "ReduceMaxCustom/d=0,p=1/1,2/1,2/3,2",
+   "ReduceMaxCustom/d=0,p=0/1,2/1,2/3,2",
+   "ReduceMaxCustom/d=1,p=1/1,2/1,2/3,2",
+   "ReduceMaxCustom/d=1,p=0/1,2/1,2/3,2"
+  ],
+  "optionalInputMode": "gen_placeholder",
+  "optionalOutputMode": "gen_placeholder",
+  "staticKey": "86fff0e0fd8903481d7dfb3b61ba4653683a45b6012b1693eaf8872b217a64a3,b54dd2ce41161d3fae59974260794c29e2caa20f49efaa8091fb668a82c51ad9",
+  "inputs": [
+   {
+    "name": "x",
+    "index": 0,
+    "dtype": "float16",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "y",
+    "index": 0,
+    "dtype": "float16",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "idx",
+    "index": 1,
+    "dtype": "int32",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   }
+  ],
+  "attrs": [
+   {
+    "name": "reduceDim",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "isKeepDim",
+    "dtype": "int",
+    "value": 0
+   }
+  ],
+  "opMode": "dynamic",
+  "deterministic": "ignore"
+ },
+ "filePath": "ascend910b/reduce_max_custom/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.json"
+}
