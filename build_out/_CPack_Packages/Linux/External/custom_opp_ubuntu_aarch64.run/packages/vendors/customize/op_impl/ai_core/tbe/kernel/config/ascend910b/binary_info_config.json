@@ -1,0 +1,53 @@
+{
+  "ReduceMaxCustom": {
+    "dynamicRankSupport": true,
+    "simplifiedKeyMode": 0,
+    "optionalInputMode": "gen_placeholder",
+    "optionalOutputMode": "gen_placeholder",
+    "params": {
+      "inputs": [
+        {
+          "name": "x",
+          "index": 0,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "index": 0,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        },
+        {
+          "name": "idx",
+          "index": 1,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        }
+      ],
+      "attrs": [
+        {
+          "name": "reduceDim"
+        },
+        {
+          "name": "isKeepDim"
+        }
+      ]
+    },
+    "binaryList": [
+      {
+        "coreType": 2,
+        "simplifiedKey": [
+          "ReduceMaxCustom/d=0,p=1/1,2/1,2/3,2",
+          "ReduceMaxCustom/d=0,p=0/1,2/1,2/3,2",
+          "ReduceMaxCustom/d=1,p=1/1,2/1,2/3,2",
+          "ReduceMaxCustom/d=1,p=0/1,2/1,2/3,2"
+        ],
+        "binPath": "ascend910b/reduce_max_custom/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.o",
+        "jsonPath": "ascend910b/reduce_max_custom/ReduceMaxCustom_4c9b5a5dd86207136a739263b28a5a86.json"
+      }
+    ]
+  }
+}
